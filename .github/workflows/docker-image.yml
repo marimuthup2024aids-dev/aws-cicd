@@ -24,7 +24,7 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          docker build -t marimuthup/aws-cicd:${{ github.sha }} .
+          docker build -t marimuthup/aws-cicd:${{ github.sha }} ./react-profile-main
           docker tag marimuthup/aws-cicd:${{ github.sha }} marimuthup/aws-cicd:latest
 
       - name: Push Docker Images
